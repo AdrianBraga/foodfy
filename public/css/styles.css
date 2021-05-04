@@ -98,15 +98,16 @@ header .active {
   gap: 20px;
 }
 
-.recipes-container .card-recipe {
+.recipes-container .card-recipe a {
   cursor: pointer;
 }
 
-.recipes-container .card-recipe img {
+.recipes-container .card-recipe a img {
+  height: 140px;
   border-radius: 15px;
 }
 
-.recipes-container .card-recipe img:hover {
+.recipes-container .card-recipe a img:hover {
   box-shadow: 5px 5px 20px 1px #FBDFDB;
 }
 
@@ -120,73 +121,6 @@ header .active {
 .recipes-container .card-recipe p {
   font-size: 14px;
   color: #777777;
-}
-
-/* === MODAL-RECIPES === */
-.modal-container {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal-container.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-content {
-  width: 100%;
-  max-width: 660px;
-  padding: 30px;
-  background: #FFFFFF;
-  border-radius: 16px;
-}
-
-.modal-content img {
-  width: 100%;
-  height: 200px;
-  border-radius: 15px;
-}
-
-.modal-content h3,
-.modal-content p,
-.modal-content span {
-  display: block;
-  text-align: center;
-}
-
-.modal-content h3 {
-  font-size: 24px;
-  font-weight: normal;
-  color: #111111;
-  margin-top: 20px;
-}
-
-.modal-content p {
-  font-size: 18px;
-  color: #777777;
-}
-
-.modal-content span {
-  font-size: 16px;
-  color: #999999;
-  margin-top: 50px;
-  cursor: pointer;
-}
-
-.modal-content span:hover {
-  font-weight: bold;
-  text-decoration: underline;
 }
 
 /* === PAGE ABOUT === */
@@ -207,6 +141,87 @@ header .active {
   line-height: 28px;
   text-align: justify; 
 }
+
+/* === PAGE RECIPE === */
+.wrapper-content {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.wrapper-content img {
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.wrapper-content h1 {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.wrapper-content p {
+  font-size: 20px;
+  color: #777;
+}
+
+.ingredients,
+.mode-preparation,
+.info-additional  {
+  margin: 47px 0;
+}
+
+.ingredients .title-container,
+.mode-preparation .title-container,
+.info-additional .title-container {
+  margin-bottom: 20px;
+}
+
+.ingredients .title-container .title-span,
+.mode-preparation .title-container .title-span,
+.info-additional .title-container .title-span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.ingredients .title-container .button-hidden,
+.mode-preparation .title-container .button-hidden,
+.info-additional .title-container .button-hidden {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+
+  cursor: pointer;
+}
+
+.ingredients .info-ingredients ul,
+.mode-preparation .info-mode-preparation ol {
+  list-style-position: inside;
+}
+
+.ingredients .info-ingredients ul li,
+.mode-preparation .info-mode-preparation ol li {
+  font-size: 18px;
+  line-height: 28px;
+  color: #444;
+}
+
+.info-additional .info-additional-content p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #444;
+  text-align: justify;
+}
+
+/* === PAGE RECIPE / CONTROL BUTTON SHOW-HIDDEN === */
+.hidden-active {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 /* === FOOTER === */
 footer {

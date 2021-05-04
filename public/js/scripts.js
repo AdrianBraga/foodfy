@@ -1,15 +1,15 @@
-const cardsRecipe = document.querySelectorAll('.card-recipe');
-const modal = document.querySelector('.modal-container');
-const closeModal = document.querySelector('.close-modal')
+const recipesHiddens = document.querySelectorAll('.recipe-hidden');
 
-for(let cardRecipe of cardsRecipe) {
-  cardRecipe.addEventListener('click', () => {
-    modal.classList.add('active');
-  });
-};
+for(let recipeHidden of recipesHiddens) {
+  const buttonHidden = recipeHidden.querySelector('.button-hidden');
 
-closeModal.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
+  buttonHidden.addEventListener('click', () => {
+    recipeHidden.querySelector('.content-hidden').classList.toggle('hidden-active')
 
-
+    if(buttonHidden.innerHTML == 'ESCONDER') {
+      buttonHidden.innerHTML = 'MOSTRAR'
+    } else {
+      buttonHidden.innerHTML = 'ESCONDER'
+    }
+  })
+}
