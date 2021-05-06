@@ -1,3 +1,4 @@
+// CONTROLE DO BOTAO SHOW/HIDDEN
 const recipesHiddens = document.querySelectorAll('.recipe-hidden');
 
 for(let recipeHidden of recipesHiddens) {
@@ -12,4 +13,14 @@ for(let recipeHidden of recipesHiddens) {
       buttonHidden.innerHTML = 'ESCONDER'
     }
   })
+}
+
+// CONTROLE DO ACTIVE DO MENU (font-weight: bold;)
+const currentPage = location.pathname;
+const menuItems = document.querySelectorAll('header .links-menu a');
+
+for(item of menuItems) {
+  if(currentPage.includes(item.getAttribute('href'))) {
+    item.classList.add('active');
+  }
 }
