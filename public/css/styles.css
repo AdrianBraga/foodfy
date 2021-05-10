@@ -165,29 +165,21 @@ header .active {
   color: #777;
 }
 
-.ingredients,
-.mode-preparation,
-.info-additional  {
+.recipe-wrapper  {
   margin: 47px 0;
 }
 
-.ingredients .title-container,
-.mode-preparation .title-container,
-.info-additional .title-container {
+.recipe-wrapper .recipe-title {
   margin-bottom: 20px;
 }
 
-.ingredients .title-container .title-span,
-.mode-preparation .title-container .title-span,
-.info-additional .title-container .title-span {
+.recipe-title span:first-child {
   font-size: 24px;
   font-weight: bold;
   margin-right: 8px;
 }
 
-.ingredients .title-container .button-hidden,
-.mode-preparation .title-container .button-hidden,
-.info-additional .title-container .button-hidden {
+.recipe-title span:last-child {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
@@ -196,19 +188,19 @@ header .active {
   cursor: pointer;
 }
 
-.ingredients .info-ingredients ul,
-.mode-preparation .info-mode-preparation ol {
+.recipe-wrapper-content ul,
+.recipe-wrapper-content ol {
   list-style-position: inside;
 }
 
-.ingredients .info-ingredients ul li,
-.mode-preparation .info-mode-preparation ol li {
+.recipe-wrapper-content ul li,
+.recipe-wrapper-content ol li {
   font-size: 18px;
   line-height: 28px;
   color: #444;
 }
 
-.info-additional .info-additional-content p {
+.recipe-wrapper-content p {
   font-size: 18px;
   line-height: 28px;
   color: #444;

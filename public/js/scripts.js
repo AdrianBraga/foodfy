@@ -1,11 +1,11 @@
 // CONTROLE DO BOTAO SHOW/HIDDEN
-const recipesHiddens = document.querySelectorAll('.recipe-hidden');
+const recipesHiddens = document.querySelectorAll('.recipe-wrapper');
 
 for(let recipeHidden of recipesHiddens) {
-  const buttonHidden = recipeHidden.querySelector('.button-hidden');
+  const buttonHidden = recipeHidden.querySelector('.hidden');
 
   buttonHidden.addEventListener('click', () => {
-    recipeHidden.querySelector('.content-hidden').classList.toggle('hidden-active')
+    recipeHidden.querySelector('.recipe-wrapper-content').classList.toggle('hidden-active')
 
     if(buttonHidden.innerHTML == 'ESCONDER') {
       buttonHidden.innerHTML = 'MOSTRAR'

@@ -1,0 +1,62 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>Foodfy - {{recipe.title}}</title>
+{% endblock head %}
+
+{% block content %}
+<section class='recipe-selected'>
+  <div class="wrapper-content">
+    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+    <h1>{{recipe.title}}</h1>
+    <p>{{recipe.author}}</p>
+  </div>
+
+  <div class="recipe-wrapper">
+    <div class="recipe-title">
+      <span>Ingredientes</span>
+      <span class='hidden'>ESCONDER</span>
+    </div>
+
+    <div class="recipe-wrapper-content">
+      <ul>
+        {% for ingredient in recipe.ingredients %}
+          <li>{{ingredient}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="recipe-wrapper">
+    <div class="recipe-title">
+      <span>Modo de preparo</span>
+      <span class='hidden'>MOSTRAR</span>
+    </div>
+
+    <div class="recipe-wrapper-content hidden-active">
+      <ol>
+        {% for preparation in recipe.preparation %}
+          <li>{{preparation}}</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+
+  <div class="recipe-wrapper">
+    <div class="recipe-title">
+      <span>Modo de preparo</span>
+      <span class='hidden'>ESCONDER</span>
+    </div>
+
+    <div class="recipe-wrapper-content">
+      <p>
+        {% if recipe.information == '' %}
+          Não há informações
+        {% else %}
+          {{recipe.information}}
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock content %}
