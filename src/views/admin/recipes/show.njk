@@ -1,0 +1,49 @@
+{% extends 'layouts/admin.njk' %}
+
+{% block content %}
+  <div class="recipe-title">
+    <h1>Receita: {{recipe.title}}</h1>
+    <button>Editar receita</button>
+  </div>
+
+   <div class="recipe-content">
+    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+    <h1>{{recipe.title}}</h1>
+    <p>por {{recipe.author}}</p>
+  </div>
+
+  <div class="recipe-wrapper">
+    <h2>Ingredientes</h2>
+    <div class="recipe-wrapper-content">
+      <ul>
+        {% for ingredient in recipe.ingredients %}
+          <li>- {{ingredient}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="recipe-wrapper">
+    <h2>Modo de preparo</h2>
+    <div class="recipe-wrapper-content hidden-active">
+      <ul>
+        {% for preparation in recipe.preparation %}
+          <li>- {{preparation}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="recipe-wrapper">
+    <h2>informações adicionais</h2>
+    <div class="recipe-wrapper-content">
+      <p>
+        {% if recipe.information == '' %}
+          Não há informações
+        {% else %}
+          {{recipe.information}}
+        {% endif %}
+      </p>
+    </div>
+  </div>
+{% endblock content %}
