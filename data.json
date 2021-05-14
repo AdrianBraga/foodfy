@@ -138,6 +138,47 @@
         "açúcar de confeiteiro e corte em quadrados."
       ],
       "information": ""
+    },
+    {
+      "id": 7,
+      "author": "gfdsgfdg",
+      "title": "dfgdfgdf",
+      "image": "https://www.google.com",
+      "ingredients": [
+        "dasd",
+        "dasdsadas",
+        "asddasdas",
+        "sadasdasd",
+        "asdsadasd"
+      ],
+      "preparation": "adsdasdasdasdasd",
+      "information": "dasdasdasdas"
+    },
+    {
+      "id": 8,
+      "author": "dfgdfs",
+      "title": "gfdsgdf",
+      "image": "https://www.google.com",
+      "ingredients": [
+        "dfg",
+        ""
+      ],
+      "preparation": "dfgdsf",
+      "information": "dfgsfdgs"
+    },
+    {
+      "id": 9,
+      "author": "Delfio Chico",
+      "title": "React com maizena",
+      "image": "https://programadoresbrasil.com.br/wp-content/uploads/2020/07/reactjs-logo-1-scaled.jpg",
+      "ingredients": [
+        "Javascript",
+        "Maizena"
+      ],
+      "preparation": [
+        "Mistura tudo"
+      ],
+      "information": "É muito forte - CUIDADO!"
     }
   ]
 }

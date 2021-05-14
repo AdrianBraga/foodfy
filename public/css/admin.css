@@ -1,7 +1,30 @@
+/* === GLOBAl - ADMIN === */
 header {
   width: 100%;
   background: #111;
   padding: 25px 0;
+}
+
+.recipe-title {
+  margin: 55px 0 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe-title button {
+  padding: 9px 20px;
+  background: #6558C3;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+
+  border: none;
+  border-radius: 4px;
 }
 
 /* === LIST RECIPE - INDEX === */
@@ -47,28 +70,6 @@ header {
 }
 
 /* === RECIPE - SHOW === */
-.recipe-title {
-  margin: 55px 0 25px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.recipe-title button {
-  padding: 9px 20px;
-  background: #6558C3;
-  outline: none;
-  cursor: pointer;
-
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-
-  border: none;
-  border-radius: 4px;
-}
-
 .recipe-content {
   text-align: center;
 }
@@ -116,4 +117,76 @@ header {
   line-height: 28px;
   color: #444;
   text-align: justify;
+}
+
+/* === RECIPE - FIELDS === */
+.item div:first-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+
+  margin: 30px 0 10px;
+}
+
+.item input,
+.item textarea {
+  width: 100%;
+  padding: 14px;
+
+  font-size: 16px;
+  color: #111;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.item textarea {
+  height: 250px;
+  margin-bottom: 100px;
+}
+
+.item input::-webkit-input-placeholder {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.buttons-add-del {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-add-del .add-ingredient,
+.buttons-add-del .add-preparation {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6558C3;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.buttons-add-del .delete-ingredient,
+.buttons-add-del .delete-preparation {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e93131;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.item .ingredients,
+.item .preparation {
+  margin-bottom: 10px;
 }
