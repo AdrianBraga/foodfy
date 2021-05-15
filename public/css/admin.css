@@ -13,7 +13,13 @@ header {
   align-items: center;
 }
 
-.recipe-title button {
+.recipe-title section.form-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.recipe-title button,
+.recipe-title section.form-buttons button {
   padding: 9px 20px;
   background: #6558C3;
   outline: none;
@@ -25,6 +31,15 @@ header {
 
   border: none;
   border-radius: 4px;
+}
+
+.recipe-title section.form-buttons button[class="delete"] {
+  background: #DC4747;
+  margin-right: 30px;
+}
+
+.recipe-title section.form-buttons button[class="delete"]:hover {
+  background-color: #e93131;
 }
 
 /* === LIST RECIPE - INDEX === */
@@ -175,7 +190,7 @@ header {
 .buttons-add-del .delete-preparation {
   font-size: 16px;
   font-weight: bold;
-  color: #e93131;
+  color: #DC4747;
 
   border: none;
   outline: none;

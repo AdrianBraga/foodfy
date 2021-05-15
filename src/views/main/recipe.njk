@@ -9,7 +9,7 @@
   <div class="wrapper-content">
     <img src="{{recipe.image}}" alt="{{recipe.title}}">
     <h1>{{recipe.title}}</h1>
-    <p>{{recipe.author}}</p>
+    <p>por {{recipe.author}}</p>
   </div>
 
   <div class="recipe-wrapper">
@@ -53,7 +53,7 @@
         {% if recipe.information == '' %}
           Não há informações
         {% else %}
-          {{recipe.information}}
+          {{recipe.information.replace("\n","<br> <br>")}}
         {% endif %}
       </p>
     </div>

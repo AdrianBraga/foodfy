@@ -1,9 +1,13 @@
 {% extends 'layouts/admin.njk' %}
 
+{% block head %}
+    <title>Foodfy | Administrador - Receita: {{recipe.title}}</title>
+{% endblock head %}
+
 {% block content %}
   <div class="recipe-title">
     <h1>Receita: {{recipe.title}}</h1>
-    <button>Editar receita</button>
+    <a href="/admin/recipes/{{recipe.id}}/edit"><button>Editar receita</button></a>
   </div>
 
    <div class="recipe-content">
@@ -41,7 +45,7 @@
         {% if recipe.information == '' %}
           Não há informações
         {% else %}
-          {{recipe.information}}
+          {{recipe.information.replace(("/(\\r)?\\n/i", "<br/>")}}
         {% endif %}
       </p>
     </div>

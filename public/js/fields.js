@@ -31,9 +31,11 @@ function RemoveInputs(idDiv, classContainer) {
 
   const newField = fieldContainer[fieldContainer.length - 1];
 
-  if(newField.children[0].value == '') return false;
-
-  id.removeChild(newField);
+  if(newField.children.lenght > 1) {
+    if(newField.children[0].value == '') return false;
+  } else {
+    id.removeChild(newField);
+  }
 }
 
 deleteIngredients.addEventListener('click', () => {

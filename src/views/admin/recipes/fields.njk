@@ -1,29 +1,37 @@
 <div class="item">
   <div>Nome do autor</div>
   <div>
-    <input type="text" name="author" placeholder='Nome e Sobrenome'>
+    <input type="text" name="author" placeholder='Nome e Sobrenome' value="{{recipe.author}}">
   </div>
 </div>
 
 <div class="item">
   <div>Nome da receita</div>
   <div>
-    <input type="text" name="title" placeholder='Nome da receita'>
+    <input type="text" name="title" placeholder='Nome da receita' value="{{recipe.title}}">
   </div>
 </div>
 
 <div class="item">
   <div>Imagem da receita</div>
   <div>
-    <input type="url" name="image" placeholder='https://www.google.com'>
+    <input type="url" name="image" placeholder='https://www.google.com' value="{{recipe.image}}">
   </div>
 </div>
 
 <div class="item" id='ingredients'>
   <div>Ingredientes</div>
-  <div class='ingredients'>
-    <input type="text" name="ingredients[]" placeholder='Adicione cada ingrediente da receita'>
-  </div>
+  {% for recipe in recipe.ingredients %}
+    <div class='ingredients'>
+      <input type="text" name="ingredients[]" placeholder='Adicione cada ingrediente da receita' value="{{recipe}}"> 
+    </div>
+
+    {% else %}
+
+    <div class='ingredients'>
+      <input type="text" name="ingredients[]" placeholder='Adicione cada ingrediente da receita' value="{{recipe}}"> 
+    </div>
+  {% endfor %}
 </div>
 
 <div class='buttons-add-del'>
@@ -33,9 +41,17 @@
 
 <div class="item" id='preparation'>
   <div>Modo de preparo</div>
-  <div class='preparation'>
-    <input type="text" name="preparation[]" placeholder='Adicione passo a passo da receita'>
-  </div>
+  {% for recipe in recipe.preparation %}
+    <div class='preparation'>
+      <input type="text" name="preparation[]" placeholder='Adicione passo a passo da receita' value="{{recipe}}">
+    </div>
+
+    {% else %}
+
+    <div class='preparation'>
+      <input type="text" name="preparation[]" placeholder='Adicione passo a passo da receita' value="{{recipe}}">
+    </div>
+  {% endfor %}
 </div>
 
 <div class='buttons-add-del'>
@@ -46,7 +62,7 @@
 <div class="item">
   <div>Informações adicionais</div>
   <div>
-    <textarea name="information" spellcheck='true'></textarea>
+    <textarea style="resize: none;" name="information" spellcheck='true'>{{recipe.information}}</textarea>
   </div>
 </div>
 
