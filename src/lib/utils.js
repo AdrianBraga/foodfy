@@ -10,6 +10,7 @@ module.exports = {
       day,
       month,
       year,
+      iso: `${year}-${month}-${day}`,
       format: `${day}/${month}/${year}`,
     };
     
