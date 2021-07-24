@@ -49,13 +49,11 @@
     </div>
 
     <div class="recipe-wrapper-content">
-      <p>
         {% if recipe.information == '' %}
           Não há informações
         {% else %}
-          {{recipe.information.replace("\n","<br> <br>")}}
+          <p>{{recipe.information}}</p>
         {% endif %}
-      </p>
     </div>
   </div>
 </section>

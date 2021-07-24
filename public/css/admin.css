@@ -132,6 +132,7 @@ header {
   line-height: 28px;
   color: #444;
   text-align: justify;
+  white-space: pre-wrap;
 }
 
 /* === RECIPE - FIELDS === */

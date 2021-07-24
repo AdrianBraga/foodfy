@@ -179,6 +179,7 @@ header .active {
   line-height: 28px;
   color: #444;
   text-align: justify;
+  white-space: pre-wrap;
 }
 
 /* === PAGE RECIPE / CONTROL BUTTON SHOW-HIDDEN === */

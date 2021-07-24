@@ -41,13 +41,11 @@
   <div class="recipe-wrapper">
     <h2>informações adicionais</h2>
     <div class="recipe-wrapper-content">
-      <p>
-        {% if recipe.information == '' %}
-          Não há informações
-        {% else %}
-          {{recipe.information.replace(("/(\\r)?\\n/i", "<br/>")}}
-        {% endif %}
-      </p>
+      {% if recipe.information == '' %}
+        <p>Não há informações</p>
+      {% else %}
+        <p>{{recipe.information}}</p>
+      {% endif %}
     </div>
   </div>
 {% endblock content %}
