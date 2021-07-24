@@ -1,10 +1,33 @@
-/* === GLOBAl - ADMIN === */
+/* === MENU === */
 header {
   width: 100%;
   background: #111;
   padding: 25px 0;
 }
 
+header .logo-header {
+  display: flex;
+  align-items: center;
+}
+
+header .links-menu {
+  margin-left: 50px;
+}
+
+header .links-menu a {
+  font-size: 15px;
+  color: #999;
+}
+
+header .links-menu a + a {
+  margin-left: 30px;
+}
+
+header .links-menu a.active {
+  color: #FFF;
+}
+
+/* === RECIPES === */
 .recipe-title {
   margin: 55px 0 30px;
 
@@ -43,7 +66,8 @@ header {
 }
 
 /* === LIST RECIPE - INDEX === */
-.list-recipe h1 {
+.list-recipe h1,
+.list-chefs h1 {
   margin: 50px 0 30px 0;
 }
 
@@ -53,9 +77,11 @@ header {
   gap: 20px;
 }
 
-.card-recipe {
+.card-recipe,
+.card-chef {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .card-recipe img {
@@ -66,7 +92,8 @@ header {
   margin-right: 20px;
 }
 
-.card-info h2 {
+.card-info h2,
+.chef-info h2 {
   font-size: 18px;
   font-weight: normal;
   color: #111;
@@ -78,10 +105,25 @@ header {
   margin: 5px 0 10px;
 }
 
-.card-info span a {
+.card-info span a,
+.chef-info span a {
   font-size: 14px;
   font-weight: bold;
   color: #6558C3;
+}
+
+/* === LIST CHEFS - INDEX === */
+.grid-chefs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card-chef img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 /* === RECIPE - SHOW === */
