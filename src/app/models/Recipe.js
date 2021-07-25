@@ -3,7 +3,7 @@ const db = require('../../config/db');
 
 module.exports = {
   index(callback) {
-    db.query(`SELECT recipes.*, chefs.name AS chef_name
+    db.query(`SELECT recipes.*, chefs.author AS chef_name
       FROM recipes
       LEFT JOIN chefs ON (recipes.chef_id = chefs.id)`, (err, results) => {
       if(err) throw `Database Error! ${err}`
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   show(id, callback) {
-    db.query(` SELECT recipes.*, chefs.name AS chef_name
+    db.query(` SELECT recipes.*, chefs.author AS chef_name
       FROM recipes
       LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
       WHERE recipes.id = $1`, [id], (err, results) => {

@@ -27,8 +27,9 @@ header .links-menu a.active {
   color: #FFF;
 }
 
-/* === RECIPES === */
-.recipe-title {
+/* === FIELDS - RECIPES / CHEFS === */
+.recipe-title,
+.chef-title {
   margin: 55px 0 30px;
 
   display: flex;
@@ -36,13 +37,16 @@ header .links-menu a.active {
   align-items: center;
 }
 
-.recipe-title section.form-buttons {
+.recipe-title section.form-buttons
+.chef-title section.form-buttons {
   display: flex;
   align-items: center;
 }
 
 .recipe-title button,
-.recipe-title section.form-buttons button {
+.recipe-title section.form-buttons button,
+.chef-title button,
+.chef-title section.form-buttons button {
   padding: 9px 20px;
   background: #6558C3;
   outline: none;
@@ -56,12 +60,14 @@ header .links-menu a.active {
   border-radius: 4px;
 }
 
-.recipe-title section.form-buttons button[class="delete"] {
+.recipe-title section.form-buttons button[class="delete"],
+.chef-title section.form-buttons button[class="delete"] {
   background: #DC4747;
   margin-right: 30px;
 }
 
-.recipe-title section.form-buttons button[class="delete"]:hover {
+.recipe-title section.form-buttons button[class="delete"]:hover,
+.chef-title section.form-buttons button[class="delete"]:hover {
   background-color: #e93131;
 }
 
@@ -126,8 +132,9 @@ header .links-menu a.active {
   margin-right: 20px;
 }
 
-/* === RECIPE - SHOW === */
-.recipe-content {
+/* === ADMIN SHOW - RECIPES / CHEFS === */
+.recipe-content,
+.chef-content {
   text-align: center;
 }
 
@@ -138,13 +145,22 @@ header .links-menu a.active {
   margin-bottom: 50px;
 }
 
-.recipe-content h1 {
+.chef-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+
+.recipe-content h1,
+.chef-content h1 {
   font-size: 36px;
   font-weight: bold;
   color: #111;
 }
 
-.recipe-content p {
+.recipe-content p,
+.chef-content p {
   font-size: 20px;
   margin-top: 5px;
   color: #777;

@@ -1,0 +1,38 @@
+{% extends 'layouts/admin.njk' %}
+
+{% block head %}
+    <title>Foodfy | Administrador - Edição de chefs</title>
+{% endblock head %}
+
+{% block content %}
+  <div class="chef-title">
+    <h1>Editando receita</h1>
+    <section class="form-buttons"> 
+      <button class="delete" type="submit" form="form-delete">Deletar</button>
+      <button class="save" type="submit" form="form-edit">Salvar chef</button>
+    </section>
+  </div>
+
+  <form id="form-edit" action="/admin/chefs?_method=PUT" method="POST">
+    <input type="hidden" name="id" value={{chef.id}}>
+
+    {% include 'admin/chefs/fields.njk' %}
+
+  </form>
+
+  <form id="form-delete" action="/admin/chefs?_method=DELETE" method="POST">
+    <input type="hidden" name="id" value={{chef.id}}>
+  </form>
+
+  <script>
+    const formDelete = document.querySelector('#form-delete')
+
+    formDelete.addEventListener('submit', function(event) {
+      const confirmation = confirm('Deseja Deletar?')
+
+      if(!confirmation) {
+        event.preventDefault();
+      }
+    })
+  </script>
+{% endblock content %}

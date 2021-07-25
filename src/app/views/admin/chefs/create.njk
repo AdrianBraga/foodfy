@@ -1,0 +1,16 @@
+{% extends 'layouts/admin.njk' %}
+
+{% block head %}
+    <title>Foodfy | Administrador - Cadastramento de chefs</title>
+{% endblock head %}
+
+{% block content %}
+  <div class="chef-title">
+    <h1>Criando chef</h1>
+    <button type='submit' form="form-create">Salvar chef</button>
+  </div>
+
+  <form id='form-create' action="/admin/chefs" method="POST">
+    {% include 'admin/chefs/fields.njk' %}
+  </form>
+{% endblock content %}
