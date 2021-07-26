@@ -32,11 +32,24 @@ module.exports = {
     })
   },
   show(id, callback) {
-    db.query(`SELECT * FROM chefs WHERE id = $1`, [id], (err, results) => {
+    db.query(`SELECT chefs.*, count(recipes) AS total_recipes
+      FROM chefs
+      LEFT JOIN recipes ON (chefs.id = recipes.chef_id)
+      WHERE chefs.id = $1
+      GROUP BY chefs.id`, [id], (err, results) => {
       if(err) throw `Database Error! ${err}`
 
       callback(results.rows[0])
     })
+  },
+  showRecipe(id, callback) {
+    db.query(`SELECT recipes.* FROM recipes
+      LEFT JOIN chefs ON (chefs.id = recipes.chef_id)
+      WHERE chefs.id = $1`, [id], (err, results) => {
+        if(err) throw `Database Error! ${err}`
+
+        callback(results.rows)
+      })
   },
   put(data, callback) {
     const query = `

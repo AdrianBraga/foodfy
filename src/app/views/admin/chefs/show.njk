@@ -13,6 +13,24 @@
    <div class="chef-content">
     <img src="{{chef.avatar_url}}" alt="{{chef.author}}">
     <h1>{{chef.author}}</h1>
-    <p>4 receitas</p>
+    {% if chef.total_recipes > 0 %}
+      <p>{{chef.total_recipes}} receita(s)</p>
+    {% else %}
+      <p>Nenhuma receita cadastrada</p>
+    {% endif %}
+  </div>
+
+  <div class="grid-recipes">
+    {% for recipe in recipes %}
+      <div class="card-recipe">
+        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+        
+        <div class="card-info">
+          <h2>{{recipe.title}}</h2>
+          <p>por {{chef.author}}</p>
+          <span><a href="/admin/recipes/{{recipe.id}}">Visualizar</a></span>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 {% endblock content %}

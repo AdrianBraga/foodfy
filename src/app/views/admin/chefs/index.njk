@@ -9,77 +9,16 @@
     <h1>Gerenciar chefs</h1>
 
     <div class="grid-chefs">
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
+        {% for chef in chefs %}
+          <div class="card-chef">
+            <img src="{{chef.avatar_url}}" alt="{{chef.author}}">
+            
+            <div class="chef-info">
+              <h2>{{chef.author}}</h2>
+              <span><a href="/admin/chefs/{{chef.id}}">Visualizar</a></span>
+            </div>
           </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
-
-        <div class="card-chef">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Chef Avatar">
-          
-          <div class="chef-info">
-            <h2>Julia Kinoto</h2>
-            <span><a href="/admin/chefs">Visualizar</a></span>
-          </div>
-        </div>
+        {% endfor %}
     </div>
   </div>
 {% endblock content %}

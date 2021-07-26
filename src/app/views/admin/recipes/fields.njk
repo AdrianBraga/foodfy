@@ -1,7 +1,12 @@
 <div class="item">
   <div>Nome do autor</div>
   <div>
-    <input type="text" name="author" placeholder='Nome e Sobrenome' value="{{recipe.author}}">
+   <select name="chef">
+        <option selected disabled>Selecione um chef</option>
+        {% for chef in chefOptions %}
+          <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {% endif %}>{{chef.author}}</option>
+        {% endfor %}
+      </select>
   </div>
 </div>
 
