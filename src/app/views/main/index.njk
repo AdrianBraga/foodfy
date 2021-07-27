@@ -24,11 +24,11 @@
   <h2>Mais acessadas</h2>
 
   <div class="recipes-container">
-    {% for recipes in recipes %}
+    {% for recipe in recipes %}
       <div class="card-recipe">
-        <a href='/recipe/{{recipes.id}}'><img src="{{recipes.image}}" alt="{{recipes.title}}"></a>
-        <h3>{{recipes.title}}</h3>
-        <p>por {{recipes.author}}</p>
+        <a href='/recipe/{{recipe.id}}'><img src="{{recipe.image}}" alt="{{recipe.title}}"></a>
+        <h3>{{recipe.title}}</h3>
+        <p>por {{recipe.chef_name}}</p>
       </div>
     {% endfor %}
   </div>
