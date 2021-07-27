@@ -2,9 +2,17 @@ const Main = require('../models/Main');
 
 module.exports = {
   index(req, res) {
-    Main.recipes((recipes) => {
-      return res.render('main/index', { recipes })
-    })
+    const { filter } = req.query;
+
+    if(filter) {
+      Main.findBy(filter, (recipes) => {
+        return res.render('main/searchRecipe', { recipes, filter })
+      })
+    } else {
+      Main.recipes((recipes) => {
+        return res.render('main/index', { recipes })
+      })
+    }
   },
   about(req, res) {
     return res.render('main/about')

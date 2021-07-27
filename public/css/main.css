@@ -2,17 +2,40 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   margin-top: 36px;
   margin-bottom: 50px;
 }
 
-.links-menu {
-  margin-left: 120px;
-}
-
 .links-menu a + a {
   margin-left: 30px;
+}
+
+header form input {
+  background: #FFF;
+  border: none;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px 15px;
+}
+
+header form input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+
+header form button {
+  background: #6558C3;
+  border-radius: 4px;
+  padding: 10px 20px;
+  
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  cursor: pointer;
 }
 
 header .active {

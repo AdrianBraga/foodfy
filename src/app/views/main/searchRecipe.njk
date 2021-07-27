@@ -1,0 +1,21 @@
+{% extends 'layouts/main.njk' %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock head %}
+
+{% block content %}
+<section class='most-access'>
+  <h2>Buscando por: {{filter}}</h2>
+
+  <div class="recipes-container">
+    {% for recipe in recipes %}
+      <div class="card-recipe">
+        <a href='/recipe/{{recipe.id}}'><img src="{{recipe.image}}" alt="{{recipe.title}}"></a>
+        <h3>{{recipe.title}}</h3>
+        <p>por {{recipe.chef_name}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}
