@@ -73,7 +73,8 @@ header .links-menu a.active {
 
 /* === LIST RECIPE - INDEX === */
 .list-recipe h1,
-.list-chefs h1 {
+.list-chefs h1,
+.list-recipe-chef h1 {
   margin: 50px 0 30px 0;
 }
 
